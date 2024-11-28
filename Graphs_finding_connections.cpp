@@ -26,5 +26,16 @@ struct Human
 
 int main()
 {
-    
+    setlocale(LC_ALL, "Rus");
+    Human a, b, c, d, e, q, r, t;
+    a.name = "Жижа";
+    b.name = "Николай";
+    c.name = "Сергей";
+    d.name = "Леонид";
+    e.name = "Геннадий";
+    q.name = "Аркадий";
+    r.name = "Паровозов";
+    t.name = "Тестировщик";
+
+
 }
