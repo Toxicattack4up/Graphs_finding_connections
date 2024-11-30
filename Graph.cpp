@@ -1,15 +1,12 @@
+#include <iostream>
+#include <string>
+#include <unordered_map>
 #include "Graph.h"
+#include "Graphs_finding_connections.cpp"
 
 Graph::Graph()
 {
-	for (int i = 0; i < SIZE; i++)
-	{
-		for (int j = 0; j < SIZE; j++)
-		{
-			matrix[i][j] = 0;
-		}
-		vertexCount++;
-	}
+	
 }
 
 // Добавление вершины
@@ -20,10 +17,16 @@ void Graph::addVetrex(int vnumber)
 }
 
 // Добавление ребра
-void Graph::addEdge(int v1, int v2, int weight)
+void Graph::addEdge(Human* a, Human* p, int weight)
 {
-	matrix[v1][v2] = weight;
-	matrix[v2][v1] = weight;
+	if (a == nullptr || p == nullptr)
+	{
+		std::cerr << "Ошибка: один из указателей равен nullptr";
+		return;
+	}
+
+	matrix[a->name][p->name] = weight;
+	matrix[p->name][a->name] = weight;
 }
 
 // Удаление вершины

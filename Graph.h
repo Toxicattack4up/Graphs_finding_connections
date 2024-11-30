@@ -10,7 +10,7 @@ public:
 	void addVetrex(int vnumber);
 
 	// Добавление ребра
-	void addEdge(int v1, int v2, int weight);
+	void addEdge(Human *a, Human *p, int weight);
 
 	// Удаление вершины
 	void delVertex(int vnumber);
@@ -26,7 +26,7 @@ private:
 	bool vertexExists(int v);
 
 	// Матрица
-	int matrix[SIZE][SIZE];
+	std::string matrix[SIZE][SIZE];
 
 	// Хранилище вершин
 	int vertexes[SIZE];
