@@ -40,6 +40,7 @@ void Graph::DFS(const std::string& person, std::unordered_set<std::string>& visi
 	// Если вершина не была посещена, то помечаем её как посещенную
 	visited.insert(person);
 
+	// Если счетчик ещё не дошел до 3 рукопожатий, то продолжаем рекурсивно вызывать функцию и проверять
 	if (counter <= 3)
 	{
 		counter++;
@@ -53,6 +54,7 @@ void Graph::DFS(const std::string& person, std::unordered_set<std::string>& visi
 	}
 	else
 	{
+		// Вывод тех, кто не знаком с искомым человеком
 		std::cout << std::endl;
 		std::cout << "Этот персонаж не знаком с начальным: " << person << std::endl;
 	}
